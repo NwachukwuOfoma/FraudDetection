@@ -1,0 +1,95 @@
+{
+  "rows": 284807,
+  "frauds": 492,
+  "fraud_rate": 0.001727485630620034,
+  "split": {
+    "train": {
+      "rows": 170884,
+      "frauds": 360
+    },
+    "validation": {
+      "rows": 56961,
+      "frauds": 57
+    },
+    "test": {
+      "rows": 56962,
+      "frauds": 75
+    }
+  },
+  "models": {
+    "Majority class baseline": {
+      "pr_auc": 0.001316667251852112,
+      "pr_auc_95ci": [
+        0.0010006671114076052,
+        0.001633106281380569
+      ],
+      "roc_auc": 0.5,
+      "brier": 0.001315557778712052,
+      "threshold": 0.0021066922590763323,
+      "precision": 0.001316667251852112,
+      "recall": 1.0,
+      "flagged": 56962,
+      "fraud_amount_caught_share": 1.0
+    },
+    "Logistic regression": {
+      "pr_auc": 0.6926036318107652,
+      "pr_auc_95ci": [
+        0.5790926859446022,
+        0.7877187045072507
+      ],
+      "roc_auc": 0.9730787936318198,
+      "brier": 0.0006524242615723342,
+      "threshold": 0.18476590578246904,
+      "precision": 0.6986301369863014,
+      "recall": 0.68,
+      "flagged": 73,
+      "fraud_amount_caught_share": 0.4819180620136986
+    },
+    "Logistic regression (class weights)": {
+      "pr_auc": 0.7436264160763403,
+      "pr_auc_95ci": [
+        0.6355233887411114,
+        0.8512935982277983
+      ],
+      "roc_auc": 0.9820257703869073,
+      "brier": 0.022731806903917805,
+      "threshold": 0.9999860881925621,
+      "precision": 0.9433962264150944,
+      "recall": 0.6666666666666666,
+      "flagged": 53,
+      "fraud_amount_caught_share": 0.5683053746412982
+    },
+    "Random forest": {
+      "pr_auc": 0.7913334278200047,
+      "pr_auc_95ci": [
+        0.6991657317215719,
+        0.86897543002098
+      ],
+      "roc_auc": 0.9471520734086873,
+      "brier": 0.00046594075859249066,
+      "threshold": 0.34360119047619053,
+      "precision": 0.9016393442622951,
+      "recall": 0.7333333333333333,
+      "flagged": 61,
+      "fraud_amount_caught_share": 0.6534040774925414
+    },
+    "Gradient boosting": {
+      "pr_auc": 0.30986127041706746,
+      "pr_auc_95ci": [
+        0.21569420301040376,
+        0.4052080868541922
+      ],
+      "roc_auc": 0.7397738206151375,
+      "brier": 0.001699673975991879,
+      "threshold": 1.0,
+      "precision": 0.47115384615384615,
+      "recall": 0.6533333333333333,
+      "flagged": 104,
+      "fraud_amount_caught_share": 0.39576363067098275
+    }
+  },
+  "gradient_boosting_random_5fold_pr_auc": {
+    "mean": 0.594832003362695,
+    "std": 0.07473491774489605
+  }
+}
